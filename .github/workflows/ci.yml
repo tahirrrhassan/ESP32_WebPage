@@ -19,13 +19,14 @@ jobs:
       - name: Install Arduino CLI
         run: |
           curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sudo bash
-          sudo apt-get install -y libstdc++6
+          sudo apt-get update
+          sudo apt-get install -y arduino-cli
 
-      - name: Setup Arduino CLI
+      - name: Set up Arduino CLI
         run: |
           arduino-cli core update-index
           arduino-cli core install esp32:esp32
 
       - name: Verify .ino file
         run: |
-          arduino-cli compile --fqbn esp32:esp32:esp32 ESP32_WebPage.ino
+          arduino-cli compile --fqbn esp32:esp32:esp32 your-folder/ESP32_WebPage.ino
