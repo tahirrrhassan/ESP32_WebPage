@@ -13,4 +13,4 @@ You will need an ESP32 and some open source libraries.
 <br>
 <br>
 
-![header image](https://raw.github.com/tahirrrhassan/ESP32_WebPage/screen.jpg)
+![header image](https://github.com/tahirrrhassan/ESP32_WebPage/screen.jpg)
