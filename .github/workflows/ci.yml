@@ -1,4 +1,4 @@
-name: ESP32 Build
+name: ESP32 Build with PlatformIO
 
 on:
   push:
@@ -16,17 +16,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install Arduino CLI
-        run: |
-          curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sudo bash
-          sudo apt-get update
-          sudo apt-get install -y arduino-cli
+      - name: Set up PlatformIO
+        uses: platformio/platformio-action@v2
 
-      - name: Set up Arduino CLI
-        run: |
-          arduino-cli core update-index
-          arduino-cli core install esp32:esp32
-
-      - name: Verify .ino file
-        run: |
-          arduino-cli compile --fqbn esp32:esp32:esp32 your-folder/ESP32_WebPage.ino
+      - name: Build ESP32 Project
+        run: platformio run --target upload --environment esp32dev
