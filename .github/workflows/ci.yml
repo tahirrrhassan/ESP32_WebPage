@@ -1,10 +1,7 @@
-name: ESP32 Build with PlatformIO
+name: PlatformIO Build
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
     branches:
       - main
 
@@ -14,10 +11,15 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Set up PlatformIO
-        uses: platformio/platformio-action@v1
-
-      - name: Build ESP32 Project
-        run: platformio run --target upload --environment esp32dev
+      - name: PlatformIO Run
+        uses: karniv00l/platformio-run-action@v1
+        with:
+          environments: "esp32dev"
+          targets: "upload"
+          project-dir: "./"
+          jobs: 4
+          silent: false
+          verbose: true
+          disable-auto-clean: false
