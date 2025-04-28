@@ -40,4 +40,4 @@ jobs:
 
       - name: Compile the ESP32 project
         run: |
-          arduino-cli compile --fqbn esp32:esp32:esp32dev ESP32_WebPage.ino
+          arduino-cli compile --fqbn esp32:esp32:esp32 ESP32_WebPage.ino
