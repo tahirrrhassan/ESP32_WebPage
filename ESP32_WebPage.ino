@@ -53,7 +53,7 @@
   and make millions of dollars, I'm happy for you!
 
 */
-
+#include <Arduino.h>
 #include <WiFi.h>       // standard library
 #include <WebServer.h>  // standard library
 #include "SuperMon.h"   // .h file that stores your html page code
