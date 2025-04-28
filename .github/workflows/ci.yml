@@ -16,11 +16,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl wget
+
       - name: Install Arduino CLI
         run: |
-          curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sudo bash
-          sudo apt-get update
-          sudo apt-get install -y arduino-cli
+          # Download the latest Arduino CLI release
+          curl -fsSL https://github.com/arduino/arduino-cli/releases/download/0.30.0/arduino-cli_0.30.0_Linux_64bit.tar.gz -o arduino-cli.tar.gz
+          
+          # Extract and install Arduino CLI
+          tar -xvzf arduino-cli.tar.gz
+          sudo mv arduino-cli /usr/local/bin/
+          
+          # Verify installation
+          arduino-cli version
 
       - name: Setup Arduino CLI and install ESP32 core
         run: |
