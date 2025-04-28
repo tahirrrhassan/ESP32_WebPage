@@ -1,6 +1,6 @@
 # ESP32 WebPage Based Monitoring and Controlling
 
-[![Arduino application](https://github.com/tahirrrhassan/ESP32_WebPage/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/tahirrrhassan/ESP32_WebPage/actions/workflows/c-cpp.yml) [![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/tahirrrhassan/ESP32_WebPage) [![License](https://img.shields.io/badge/license-GPL%203.0-blue)](https://github.com/tahirrrhassan/ESP32_WebPage) [![Quality](https://img.shields.io/badge/quality-A%2B-brightgreen)](https://github.com/tahirrrhassan/ESP32_WebPage)
+[![Arduino application](https://github.com/tahirrrhassan/ESP32_WebPage/actions/workflows/ci.yml/badge.svg)](https://github.com/tahirrrhassan/ESP32_WebPage/actions/workflows/ci.yml) [![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/tahirrrhassan/ESP32_WebPage) [![License](https://img.shields.io/badge/license-GPL%203.0-blue)](https://github.com/tahirrrhassan/ESP32_WebPage) [![Quality](https://img.shields.io/badge/quality-A%2B-brightgreen)](https://github.com/tahirrrhassan/ESP32_WebPage)
 
 Sample code for updating a web page and getting user actions sent back to the microcontroller.
 
@@ -13,4 +13,4 @@ You will need an ESP32 and some open source libraries.
 <br>
 <br>
 
-![header image](https://raw.github.com/tahirrrhassan/ESP32_WebPage/master/screen.jpg)
+![header image](https://raw.github.com/tahirrrhassan/ESP32_WebPage/screen.jpg)
